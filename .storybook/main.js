@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
     stories: ['../src/stories/**/*.stories.tsx'],
     addons: [
@@ -8,6 +10,11 @@ module.exports = {
     webpackFinal: async config => {
       config.module.rules = [
         ...config.module.rules,
+        {
+            test: /\.scss$/,
+            loaders: ['style-loader', 'css-loader', 'sass-loader'],
+            include: path.resolve(__dirname, '../')
+        },
         {
           test: /\.(ts|tsx)$/,
           use: [

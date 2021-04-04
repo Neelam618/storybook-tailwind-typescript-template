@@ -15,9 +15,9 @@ type ButtonTypes = {
   onClick(): void;
 }
 
-const BASE_BUTTON = 'rounded outline-none shadow py-3 px-12 font-normal uppercase tracking-wider text-lg'
-const CONTAINED_BUTTON = `${BASE_BUTTON} bg-teal-400 border border-teal-400 text-white`
-const OUTLINED_BUTTON = `${BASE_BUTTON} border border-teal-400 text-teal-400`
+const BASE_BUTTON = 'rounded outline-none shadow py-3 px-12 font-normal uppercase tracking-wider text-lg text-white'
+const CONTAINED_BUTTON = `${BASE_BUTTON} bg-red-400 border border-red-400 text-white`
+const OUTLINED_BUTTON = `${BASE_BUTTON} border border-red-400 text-red-400`
 
 export const Button:FC<ButtonTypes> = ({ onClick, label = "Some label", outlined }) => {
   return (
